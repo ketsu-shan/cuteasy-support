@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CutEasy technical support and contact information">
+  <title>CutEasy Support</title>
+  <style>
+    :root { color-scheme:light; --ink:#151515; --muted:#626262; --line:#d9d9dc; --blue:#002fa7; --surface:#f7f7f8; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:#fff; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; line-height:1.65; }
+    header, main, footer { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,720px) minmax(0,1fr); }
+    header { border-bottom:1px solid var(--line); background:var(--surface); }
+    header > div, main > div, footer > div { grid-column:2; padding-left:24px; padding-right:24px; }
+    header > div { padding-top:64px; padding-bottom:48px; }
+    .folio { color:var(--blue); font-size:clamp(56px,12vw,112px); font-weight:700; line-height:.8; letter-spacing:-.07em; }
+    h1 { margin:28px 0 8px; font-size:clamp(36px,7vw,64px); line-height:1; letter-spacing:-.045em; }
+    .intro, .muted { color:var(--muted); }
+    main > div { padding-top:24px; padding-bottom:64px; }
+    section { padding:28px 0; border-bottom:1px solid var(--line); }
+    h2 { margin:0 0 12px; font-size:22px; letter-spacing:-.02em; }
+    h3 { margin:20px 0 6px; font-size:16px; }
+    p { margin:0 0 12px; }
+    ol { margin:8px 0 0; padding-left:22px; }
+    a { color:var(--blue); text-underline-offset:3px; }
+    .contact { display:inline-block; margin-top:4px; padding:10px 14px; border:1px solid var(--blue); font-weight:600; text-decoration:none; }
+    footer { border-top:1px solid var(--line); }
+    footer > div { display:flex; justify-content:space-between; gap:24px; padding-top:24px; padding-bottom:40px; color:var(--muted); font-size:14px; }
+    @media (max-width:640px) { header > div { padding-top:44px; } footer > div { flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <header><div>
+    <div class="folio" aria-hidden="true">02</div>
+    <h1>CutEasy Support</h1>
+    <p class="intro">Help with clipboard history, automatic screenshot collection, image annotation, OCR, and paste shortcuts on macOS.</p>
+  </div></header>
+  <main><div>
+    <section>
+      <h2>Contact</h2>
+      <p>Email support with a description of the problem, your macOS version, and your CutEasy version. Do not include private clipboard content or screenshots unless they are necessary to explain the issue.</p>
+      <a class="contact" href="mailto:moonintahiti@163.com?subject=CutEasy%20Support">Email moonintahiti@163.com</a>
+    </section>
+    <section>
+      <h2>Screenshot folder setup</h2>
+      <ol>
+        <li>Open CutEasy Settings from the menu-bar icon.</li>
+        <li>Under Permissions, choose Screenshot Folder.</li>
+        <li>Select the same folder macOS uses to save screenshots, commonly Desktop.</li>
+      </ol>
+      <p class="muted">This is a one-time selection. CutEasy restores access after relaunch and monitors only the selected folder.</p>
+    </section>
+    <section>
+      <h2>Frequently asked questions</h2>
+      <h3>Why does one-click paste request Accessibility?</h3>
+      <p>macOS requires this permission before CutEasy can send Command-V to another app. Without it, CutEasy still copies the item and you can press Command-V manually.</p>
+      <h3>Where is my content stored?</h3>
+      <p>Clipboard history, images, OCR results, and annotations stay in CutEasy's sandbox container on your Mac.</p>
+      <h3>How do I stop monitoring?</h3>
+      <p>Disable clipboard history or choose Stop Watching beside Screenshot Folder in Settings. You can also clear all saved history there.</p>
+      <h3>Does saving an edited image replace the original?</h3>
+      <p>No. Save creates a new history item, preserves the original, and puts the edited image on the system clipboard.</p>
+    </section>
+    <section>
+      <h2>System requirements</h2>
+      <p>CutEasy 1.0 requires macOS 15 or later and supports both Apple Silicon and Intel Macs.</p>
+    </section>
+  </div></main>
+  <footer><div><span>© 2026 CutEasy</span><a href="privacy.html">Privacy Policy</a></div></footer>
+</body>
+</html>
