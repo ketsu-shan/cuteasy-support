@@ -1,47 +1,81 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="CutEasy Privacy Policy">
-  <title>CutEasy Privacy Policy</title>
+  <meta name="description" content="CutEasy 隐私政策 / CutEasy Privacy Policy">
+  <title>CutEasy 隐私政策 | Privacy Policy</title>
   <style>
-    :root { color-scheme: light; --ink:#151515; --muted:#626262; --line:#d9d9dc; --blue:#002fa7; --surface:#f7f7f8; }
+    :root { color-scheme:light; --ink:#151515; --muted:#626262; --line:#d9d9dc; --blue:#002fa7; --surface:#f7f7f8; }
     * { box-sizing:border-box; }
-    body { margin:0; color:var(--ink); background:#fff; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; line-height:1.65; }
-    header, main, footer { display:grid; grid-template-columns:minmax(0, 1fr) minmax(0, 720px) minmax(0, 1fr); }
+    body { margin:0; color:var(--ink); background:#fff; font-family:"Helvetica Neue",Helvetica,Arial,"PingFang SC",sans-serif; line-height:1.7; }
+    header, main, footer { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,760px) minmax(0,1fr); }
     header { border-bottom:1px solid var(--line); background:var(--surface); }
     header > div, main > article, footer > div { grid-column:2; padding-left:24px; padding-right:24px; }
-    header > div { padding-top:64px; padding-bottom:48px; }
-    .folio { color:var(--blue); font-size:clamp(56px, 12vw, 112px); font-weight:700; line-height:.8; letter-spacing:-.07em; }
-    h1 { margin:28px 0 8px; font-size:clamp(36px, 7vw, 64px); line-height:1; letter-spacing:-.045em; }
+    header > div { padding-top:52px; padding-bottom:42px; }
+    .topbar { display:flex; align-items:flex-start; justify-content:space-between; gap:24px; }
+    .folio { color:var(--blue); font-size:clamp(56px,12vw,112px); font-weight:700; line-height:.8; letter-spacing:-.07em; }
+    .language { display:flex; border:1px solid var(--line); }
+    .language button { border:0; border-right:1px solid var(--line); padding:9px 13px; background:#fff; color:var(--ink); font:inherit; cursor:pointer; }
+    .language button:last-child { border-right:0; }
+    .language button[aria-pressed="true"] { background:var(--blue); color:#fff; }
+    h1 { margin:28px 0 8px; font-size:clamp(36px,7vw,64px); line-height:1.08; letter-spacing:-.045em; }
     .meta { margin:0; color:var(--muted); }
     article { padding-top:24px; padding-bottom:64px; }
-    section { display:grid; grid-template-columns:170px 1fr; gap:28px; padding:28px 0; border-bottom:1px solid var(--line); }
-    h2 { margin:0; font-size:15px; line-height:1.4; }
+    section { display:grid; grid-template-columns:180px 1fr; gap:28px; padding:28px 0; border-bottom:1px solid var(--line); }
+    h2 { margin:0; font-size:15px; line-height:1.5; }
     p { margin:0; }
     a { color:var(--blue); text-underline-offset:3px; }
     footer { border-top:1px solid var(--line); }
     footer > div { display:flex; justify-content:space-between; gap:24px; padding-top:24px; padding-bottom:40px; color:var(--muted); font-size:14px; }
-    @media (max-width:640px) { header > div { padding-top:44px; } section { grid-template-columns:1fr; gap:8px; } footer > div { flex-direction:column; } }
+    [hidden] { display:none !important; }
+    @media (max-width:640px) { header > div { padding-top:36px; } .topbar { align-items:center; } section { grid-template-columns:1fr; gap:8px; } footer > div { flex-direction:column; } }
   </style>
 </head>
 <body>
   <header><div>
-    <div class="folio" aria-hidden="true">01</div>
-    <h1>CutEasy Privacy Policy</h1>
-    <p class="meta">Last updated September 2, 2026</p>
+    <div class="topbar">
+      <div class="folio" aria-hidden="true">01</div>
+      <nav class="language" aria-label="选择语言 / Choose language">
+        <button type="button" data-language="zh" aria-pressed="true">中文</button>
+        <button type="button" data-language="en" aria-pressed="false">English</button>
+      </nav>
+    </div>
+    <div data-copy="zh"><h1>CutEasy 隐私政策</h1><p class="meta">最后更新：2026 年 9 月 2 日</p></div>
+    <div data-copy="en" hidden><h1>CutEasy Privacy Policy</h1><p class="meta">Last updated September 2, 2026</p></div>
   </div></header>
-  <main><article>
-    <section><h2>Overview</h2><p>CutEasy is designed to keep user content on the user's Mac. No account or login is required.</p></section>
-    <section><h2>Local storage</h2><p>Clipboard history, imported images, screenshots, image annotations, OCR results, and saved application preferences are stored in CutEasy's sandbox container on the user's Mac.</p></section>
-    <section><h2>No developer collection</h2><p>CutEasy does not send clipboard content, saved images, annotations, OCR results, or translations to the developer, advertising networks, or analytics providers. CutEasy does not use advertising or third-party analytics SDKs.</p></section>
-    <section><h2>Clipboard access</h2><p>Clipboard monitoring is disabled until the user chooses to enable clipboard history. It can be paused at any time, and saved history can be deleted from Settings.</p></section>
-    <section><h2>Screenshot folder</h2><p>Screenshot monitoring is optional. CutEasy accesses only a folder selected through the macOS file picker and stores an app-scoped security-scoped bookmark so that access can continue after relaunch. Folder access can be revoked in Settings.</p></section>
-    <section><h2>Accessibility</h2><p>Accessibility permission is optional and is used only to send Command-V after the user invokes a one-click paste action. Without permission, CutEasy copies the selected item to the system clipboard and the user can paste manually.</p></section>
-    <section><h2>Retention and deletion</h2><p>Content remains on the user's Mac until the user deletes individual items, clears CutEasy history, or removes the app's local data.</p></section>
-    <section><h2>Contact</h2><p>Questions about privacy can be sent to <a href="mailto:moonintahiti@163.com">moonintahiti@163.com</a>. For product help, visit <a href="support.html">CutEasy Support</a>.</p></section>
-  </article></main>
-  <footer><div><span>© 2026 CutEasy</span><a href="support.html">Technical Support</a></div></footer>
+  <main>
+    <article data-copy="zh">
+      <section><h2>概述</h2><p>CutEasy 的设计原则是将用户内容保留在用户自己的 Mac 上。使用本应用无需注册账号或登录。</p></section>
+      <section><h2>本地存储</h2><p>剪贴板历史、导入图片、截图、图片批注、OCR 识别结果和应用偏好设置均保存在用户 Mac 上的 CutEasy 沙盒容器中。</p></section>
+      <section><h2>开发者不收集数据</h2><p>CutEasy 不会将剪贴板内容、保存的图片、批注、OCR 结果或翻译内容发送给开发者、广告网络或分析服务。CutEasy 不包含广告或第三方分析 SDK。</p></section>
+      <section><h2>剪贴板访问</h2><p>只有用户主动启用剪贴板历史后，CutEasy 才会开始监控剪贴板。用户可以随时暂停监控，并可在设置中清除全部历史记录。</p></section>
+      <section><h2>截图文件夹访问</h2><p>截图监控为可选功能。CutEasy 只访问用户通过 macOS 文件选择器主动选择的文件夹，并使用应用范围的 security-scoped bookmark 在重启后恢复访问。用户可以随时在设置中停止监控并撤销访问。</p></section>
+      <section><h2>辅助功能权限</h2><p>辅助功能权限为可选权限，仅在用户主动使用“一键粘贴”时用于发送 Command-V。若未授权，CutEasy 只会把所选内容复制到系统剪贴板，用户仍可手动粘贴。</p></section>
+      <section><h2>保留与删除</h2><p>内容会保留在用户的 Mac 上，直到用户删除单条记录、清除 CutEasy 历史或移除应用的本地数据。</p></section>
+      <section><h2>联系我们</h2><p>隐私相关问题请发送邮件至 <a href="mailto:moonintahiti@163.com">moonintahiti@163.com</a>。产品使用帮助请访问 <a href="support.html">CutEasy 技术支持</a>。</p></section>
+    </article>
+    <article data-copy="en" hidden>
+      <section><h2>Overview</h2><p>CutEasy is designed to keep user content on the user's Mac. No account or login is required.</p></section>
+      <section><h2>Local storage</h2><p>Clipboard history, imported images, screenshots, image annotations, OCR results, and saved application preferences are stored in CutEasy's sandbox container on the user's Mac.</p></section>
+      <section><h2>No developer collection</h2><p>CutEasy does not send clipboard content, saved images, annotations, OCR results, or translations to the developer, advertising networks, or analytics providers. CutEasy does not use advertising or third-party analytics SDKs.</p></section>
+      <section><h2>Clipboard access</h2><p>Clipboard monitoring is disabled until the user chooses to enable clipboard history. It can be paused at any time, and saved history can be deleted from Settings.</p></section>
+      <section><h2>Screenshot folder</h2><p>Screenshot monitoring is optional. CutEasy accesses only a folder selected through the macOS file picker and stores an app-scoped security-scoped bookmark so that access can continue after relaunch. Folder access can be revoked in Settings.</p></section>
+      <section><h2>Accessibility</h2><p>Accessibility permission is optional and is used only to send Command-V after the user invokes a one-click paste action. Without permission, CutEasy copies the selected item to the system clipboard and the user can paste manually.</p></section>
+      <section><h2>Retention and deletion</h2><p>Content remains on the user's Mac until the user deletes individual items, clears CutEasy history, or removes the app's local data.</p></section>
+      <section><h2>Contact</h2><p>Questions about privacy can be sent to <a href="mailto:moonintahiti@163.com">moonintahiti@163.com</a>. For product help, visit <a href="support.html">CutEasy Support</a>.</p></section>
+    </article>
+  </main>
+  <footer><div><span>© 2026 CutEasy</span><a href="support.html"><span data-label="zh">技术支持</span><span data-label="en" hidden>Technical Support</span></a></div></footer>
+  <script>
+    const buttons = document.querySelectorAll('[data-language]');
+    buttons.forEach(button => button.addEventListener('click', () => {
+      const language = button.dataset.language;
+      document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+      document.querySelectorAll('[data-copy]').forEach(node => node.hidden = node.dataset.copy !== language);
+      document.querySelectorAll('[data-label]').forEach(node => node.hidden = node.dataset.label !== language);
+      buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    }));
+  </script>
 </body>
 </html>
