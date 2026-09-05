@@ -1,71 +1,76 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="CutEasy technical support and contact information">
-  <title>CutEasy Support</title>
+  <meta name="description" content="CutEasy 技术支持 / CutEasy Technical Support">
+  <title>CutEasy 技术支持 | Support</title>
   <style>
     :root { color-scheme:light; --ink:#151515; --muted:#626262; --line:#d9d9dc; --blue:#002fa7; --surface:#f7f7f8; }
     * { box-sizing:border-box; }
-    body { margin:0; color:var(--ink); background:#fff; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; line-height:1.65; }
-    header, main, footer { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,720px) minmax(0,1fr); }
+    body { margin:0; color:var(--ink); background:#fff; font-family:"Helvetica Neue",Helvetica,Arial,"PingFang SC",sans-serif; line-height:1.7; }
+    header, main, footer { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,760px) minmax(0,1fr); }
     header { border-bottom:1px solid var(--line); background:var(--surface); }
     header > div, main > div, footer > div { grid-column:2; padding-left:24px; padding-right:24px; }
-    header > div { padding-top:64px; padding-bottom:48px; }
+    header > div { padding-top:52px; padding-bottom:42px; }
+    .topbar { display:flex; align-items:flex-start; justify-content:space-between; gap:24px; }
     .folio { color:var(--blue); font-size:clamp(56px,12vw,112px); font-weight:700; line-height:.8; letter-spacing:-.07em; }
-    h1 { margin:28px 0 8px; font-size:clamp(36px,7vw,64px); line-height:1; letter-spacing:-.045em; }
+    .language { display:flex; border:1px solid var(--line); }
+    .language button { border:0; border-right:1px solid var(--line); padding:9px 13px; background:#fff; color:var(--ink); font:inherit; cursor:pointer; }
+    .language button:last-child { border-right:0; }
+    .language button[aria-pressed="true"] { background:var(--blue); color:#fff; }
+    h1 { margin:28px 0 8px; font-size:clamp(36px,7vw,64px); line-height:1.08; letter-spacing:-.045em; }
     .intro, .muted { color:var(--muted); }
     main > div { padding-top:24px; padding-bottom:64px; }
     section { padding:28px 0; border-bottom:1px solid var(--line); }
     h2 { margin:0 0 12px; font-size:22px; letter-spacing:-.02em; }
     h3 { margin:20px 0 6px; font-size:16px; }
     p { margin:0 0 12px; }
-    ol { margin:8px 0 0; padding-left:22px; }
+    ol { margin:8px 0 12px; padding-left:22px; }
     a { color:var(--blue); text-underline-offset:3px; }
     .contact { display:inline-block; margin-top:4px; padding:10px 14px; border:1px solid var(--blue); font-weight:600; text-decoration:none; }
     footer { border-top:1px solid var(--line); }
     footer > div { display:flex; justify-content:space-between; gap:24px; padding-top:24px; padding-bottom:40px; color:var(--muted); font-size:14px; }
-    @media (max-width:640px) { header > div { padding-top:44px; } footer > div { flex-direction:column; } }
+    [hidden] { display:none !important; }
+    @media (max-width:640px) { header > div { padding-top:36px; } .topbar { align-items:center; } footer > div { flex-direction:column; } }
   </style>
 </head>
 <body>
   <header><div>
-    <div class="folio" aria-hidden="true">02</div>
-    <h1>CutEasy Support</h1>
-    <p class="intro">Help with clipboard history, automatic screenshot collection, image annotation, OCR, and paste shortcuts on macOS.</p>
+    <div class="topbar">
+      <div class="folio" aria-hidden="true">02</div>
+      <nav class="language" aria-label="选择语言 / Choose language">
+        <button type="button" data-language="zh" aria-pressed="true">中文</button>
+        <button type="button" data-language="en" aria-pressed="false">English</button>
+      </nav>
+    </div>
+    <div data-copy="zh"><h1>CutEasy 技术支持</h1><p class="intro">获取 macOS 剪贴板历史、截图自动收录、图片批注、OCR 和粘贴快捷键的使用帮助。</p></div>
+    <div data-copy="en" hidden><h1>CutEasy Support</h1><p class="intro">Help with clipboard history, automatic screenshot collection, image annotation, OCR, and paste shortcuts on macOS.</p></div>
   </div></header>
-  <main><div>
-    <section>
-      <h2>Contact</h2>
-      <p>Email support with a description of the problem, your macOS version, and your CutEasy version. Do not include private clipboard content or screenshots unless they are necessary to explain the issue.</p>
-      <a class="contact" href="mailto:moonintahiti@163.com?subject=CutEasy%20Support">Email moonintahiti@163.com</a>
-    </section>
-    <section>
-      <h2>Screenshot folder setup</h2>
-      <ol>
-        <li>Open CutEasy Settings from the menu-bar icon.</li>
-        <li>Under Permissions, choose Screenshot Folder.</li>
-        <li>Select the same folder macOS uses to save screenshots, commonly Desktop.</li>
-      </ol>
-      <p class="muted">This is a one-time selection. CutEasy restores access after relaunch and monitors only the selected folder.</p>
-    </section>
-    <section>
-      <h2>Frequently asked questions</h2>
-      <h3>Why does one-click paste request Accessibility?</h3>
-      <p>macOS requires this permission before CutEasy can send Command-V to another app. Without it, CutEasy still copies the item and you can press Command-V manually.</p>
-      <h3>Where is my content stored?</h3>
-      <p>Clipboard history, images, OCR results, and annotations stay in CutEasy's sandbox container on your Mac.</p>
-      <h3>How do I stop monitoring?</h3>
-      <p>Disable clipboard history or choose Stop Watching beside Screenshot Folder in Settings. You can also clear all saved history there.</p>
-      <h3>Does saving an edited image replace the original?</h3>
-      <p>No. Save creates a new history item, preserves the original, and puts the edited image on the system clipboard.</p>
-    </section>
-    <section>
-      <h2>System requirements</h2>
-      <p>CutEasy 1.0 requires macOS 15 or later and supports both Apple Silicon and Intel Macs.</p>
-    </section>
-  </div></main>
-  <footer><div><span>© 2026 CutEasy</span><a href="privacy.html">Privacy Policy</a></div></footer>
+  <main>
+    <div data-copy="zh">
+      <section><h2>联系支持</h2><p>发送邮件时，请尽量说明问题、macOS 版本、CutEasy 版本和操作步骤。除非排查问题确有必要，请不要附带私人剪贴板内容或截图。</p><a class="contact" href="mailto:moonintahiti@163.com?subject=CutEasy%20技术支持">发送邮件至 moonintahiti@163.com</a></section>
+      <section><h2>设置截图文件夹</h2><ol><li>点击菜单栏中的 CutEasy 图标并打开设置。</li><li>在“权限”区域选择“截图文件夹”。</li><li>选择与 macOS 截图保存位置相同的文件夹，通常为“桌面”。</li></ol><p class="muted">只需选择一次。CutEasy 会在重新启动后恢复访问，并且只监控用户选择的文件夹。</p></section>
+      <section><h2>常见问题</h2><h3>为什么一键粘贴需要辅助功能权限？</h3><p>macOS 要求应用取得该权限后才能向其他应用发送 Command-V。未授权时，CutEasy 仍会复制所选内容，用户可以手动按 Command-V。</p><h3>我的内容保存在哪里？</h3><p>剪贴板历史、图片、OCR 结果和批注均保存在用户 Mac 上的 CutEasy 沙盒容器内。</p><h3>如何停止监控？</h3><p>可以在设置中关闭剪贴板历史，或点击截图文件夹旁的“停止监控”。也可以在设置中清除全部历史记录。</p><h3>保存编辑后的图片会覆盖原图吗？</h3><p>不会。保存会创建一条新的历史记录，保留原图，并将编辑后的图片放入系统剪贴板。</p></section>
+      <section><h2>系统要求</h2><p>CutEasy 1.0 需要 macOS 15 或更高版本，同时支持 Apple Silicon 和 Intel Mac。</p></section>
+    </div>
+    <div data-copy="en" hidden>
+      <section><h2>Contact</h2><p>Email support with a description of the problem, your macOS version, and your CutEasy version. Do not include private clipboard content or screenshots unless they are necessary to explain the issue.</p><a class="contact" href="mailto:moonintahiti@163.com?subject=CutEasy%20Support">Email moonintahiti@163.com</a></section>
+      <section><h2>Screenshot folder setup</h2><ol><li>Open CutEasy Settings from the menu-bar icon.</li><li>Under Permissions, choose Screenshot Folder.</li><li>Select the same folder macOS uses to save screenshots, commonly Desktop.</li></ol><p class="muted">This is a one-time selection. CutEasy restores access after relaunch and monitors only the selected folder.</p></section>
+      <section><h2>Frequently asked questions</h2><h3>Why does one-click paste request Accessibility?</h3><p>macOS requires this permission before CutEasy can send Command-V to another app. Without it, CutEasy still copies the item and you can press Command-V manually.</p><h3>Where is my content stored?</h3><p>Clipboard history, images, OCR results, and annotations stay in CutEasy's sandbox container on your Mac.</p><h3>How do I stop monitoring?</h3><p>Disable clipboard history or choose Stop Watching beside Screenshot Folder in Settings. You can also clear all saved history there.</p><h3>Does saving an edited image replace the original?</h3><p>No. Save creates a new history item, preserves the original, and puts the edited image on the system clipboard.</p></section>
+      <section><h2>System requirements</h2><p>CutEasy 1.0 requires macOS 15 or later and supports both Apple Silicon and Intel Macs.</p></section>
+    </div>
+  </main>
+  <footer><div><span>© 2026 CutEasy</span><a href="privacy.html"><span data-label="zh">隐私政策</span><span data-label="en" hidden>Privacy Policy</span></a></div></footer>
+  <script>
+    const buttons = document.querySelectorAll('[data-language]');
+    buttons.forEach(button => button.addEventListener('click', () => {
+      const language = button.dataset.language;
+      document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+      document.querySelectorAll('[data-copy]').forEach(node => node.hidden = node.dataset.copy !== language);
+      document.querySelectorAll('[data-label]').forEach(node => node.hidden = node.dataset.label !== language);
+      buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    }));
+  </script>
 </body>
 </html>
